@@ -16,16 +16,8 @@
     <script src="index.js"></script>
     <script type="text/javascript"
         src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=08nn6ceqnp"></script>
-    <script id="code">
-        var mapOptions = {
-            center: new naver.maps.LatLng(37.3595704, 127.105399),
-            zoom: 10
-        };
-        var map = new naver.maps.Map('map', {
-            center: new naver.maps.LatLng(37.3595704, 127.105399),
-            zoom: 10
-        });
-    </script>
+
+
     <title>Wedding Invitation</title>
 </head>
 
@@ -50,6 +42,7 @@
     <div id="secondPage">
         <div class="scn-header1">초대합니다</div>
         <div class="scn-header2">INVITATION</div>
+        <div class="h-line"></div>
         <div class="scn-header3">
             함께 맞이하는 네번째 봄, 저희 두 사람 백년가약을 맺고자 합니다.<br>아름답고 행복한 부부가 되도록 따뜻한 사랑으로 축복해 주시기를 부탁드립니다.
             <br><br>We cordially invite you to watch us as we start the next chapter in our lives.<br>We would be very
@@ -60,7 +53,20 @@
         <div class="scn-header1">오시는 길</div>
         <div class="scn-header2">LOCATION</div>
 
-        <div id="map" style="width:100%;height:600px;"></div>
+        <div id="map"></div>
+        <script>
+            var mapOptions = {
+                center: new naver.maps.LatLng(37.5043513, 127.0292013),
+                zoom: 15
+            };
+            var mapDiv = document.getElementById('map');
+            var map = new naver.maps.Map(mapDiv, mapOptions); // id와 option
+
+            var marker = new naver.maps.Marker({
+            position: new naver.maps.LatLng(37.5043513, 127.0292013),
+            map: map
+        });
+        </script>
         <div class="scn-header4"><b>메리스에이프럴</b>
             <br><br>서울특별시 강남구 봉은사로16길 31 (역삼동 614-7) 1층
             <br>02-514-3676
