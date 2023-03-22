@@ -152,6 +152,27 @@ body {
 
 @import url(https://fonts.googleapis.com/css?family=BenchNine:700);
 
+@-webkit-keyframes sparkle {
+    from {
+        background-position: 0% 100%;
+    }
+
+    to {
+        background-position: 200% 100%;
+    }
+}
+
+@keyframes sparkle {
+    from {
+        background-position: 0% 100%;
+    }
+
+    to {
+        background-position: 200% 100%;
+    }
+}
+
+
 .snip1535 {
     background-color: #7895B2;
     border: none;
@@ -170,7 +191,7 @@ body {
     font-weight: 700;
 }
 
-.snip1535:before,
+/* .snip1535:before,
 .snip1535:after {
     border-color: transparent;
     -webkit-transition: all 0.25s;
@@ -189,6 +210,7 @@ body {
     border-top-width: 2px;
     right: -5px;
     top: -5px;
+
 }
 
 .snip1535:after {
@@ -210,8 +232,24 @@ body {
 .snip1535.hover:after {
     height: 100%;
     width: 100%;
-}
+} */
 
+.snip1535:before {
+    -webkit-animation: sparkle 4s infinite linear;
+    animation: sparkle 4s infinite linear;
+    background: linear-gradient(90deg, #7895B2 0%, #edf49b 11%, #f49ba8 22%, #7895B2 33%, #edf49b 44%, #f49ba8 55%, #7895B2 66%, #edf49b 77%, #f49ba8 88%, #7895B2 100%);
+    background-size: 300% 100%;
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+    filter: blur(4px);
+    z-index: -1;
+    transform: scale(0.99) translateY(3px);
+}
 
 .rsvp-btn {
     display: flex;
@@ -227,15 +265,19 @@ body {
     0% {
         opacity: 0
     }
+
     25% {
         opacity: 1
     }
+
     50% {
         opacity: 1
     }
+
     75% {
         opacity: 1
     }
+
     100% {
         opacity: 0
     }
