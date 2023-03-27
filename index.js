@@ -14,12 +14,11 @@ function changeImage() {
 }
 
 function init(){
-  myImage[3].style.display = "block";  
+  // myImage[3].style.display = "block";  
   for (i = 0; i < myImage.length; i++) {
     myImage[i].style.display = "none";  
   }
-  
-  setTimeout(changeImage,0);
+  changeImage();
 }
 
 init();
