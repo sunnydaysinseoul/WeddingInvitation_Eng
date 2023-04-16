@@ -21,4 +21,16 @@ function init(){
   changeImage();
 }
 
+function zelle_click(){
+  const content = "shanehaddad.snh@gmail.com";
+  navigator.clipboard.writeText(content)
+  .then(() => {
+    alert("Zelle recipient info has copied to clipboard.")
+  })
+  .catch(err => {
+    console.log('Something went wrong', err);
+});
+  
+}
+
 init();
