@@ -122,7 +122,10 @@ body {
     word-break: keep-all;
     vertical-align: middle;
 }
-
+.payment-box{
+    width: fit-content;
+    margin:0 auto;
+}
 .v-line {
     /* border-left: 2px solid #7895B2; */
     /* height: 50px; */
